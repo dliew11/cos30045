@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description"	content="Data Visualisation Exercise 1"/>
+	<meta name="keywords"		  content="HTML, CSS"/>
+	<meta name="author"			  content="Derrick"/>
+
+	<title>COS30045 DATA VISUALISATION</title>
+  <style>
+    a{
+      
+      color: black;
+      padding: 15px 25px;
+      text-align: center;
+      text-decoration: none;
+     
+    }
+    
+    a:hover{
+      background-color: rgb(0, 255, 72);
+    }
+
+    a{border: 2px solid black;}
+
+    body{
+      background-color: rgb(28, 207, 231);
+    }
+    </style>
+	<body>
+  <h1>COS30045 Data Visualisation</h1>  
+  
+  <h2>Lab 1 </h2>
+    <a href="LAB1.1.html" class="double">lab1.1</a> &nbsp
+    <a href="LAB1.2.html" class="double">lab1.2</a> &nbsp
+    <a href="LAB1.3 Drawing with svg.html" class="double">lab1.3</a> &nbsp
+
+<br>
+<h2>Lab 2</h2>
+    <a href="lab2-1.html" class="double">lab2.1</a> &nbsp
+    <a href="Lab2-2.html" class="double">lab2.2</a> &nbsp
+    <a href="lab2-3.html" class="double">lab2.3</a> &nbsp
+    <a href="lab 2-4.html" class="double">lab2.4</a> &nbsp
+    <br>
+    <h2>Lab 3 </h2>
+    <a href="lab3.1.html" class="double">lab3.1</a> &nbsp
+    <a href="lab3.2.html" class="double">lab3.2</a> &nbsp
+    <br>
+    <br>
+    <footer style ="color: rgb(59, 58, 58);"> COS30045 DATA visualisation<br> LIEW Chan Yeong Derrick</footer>
+
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>

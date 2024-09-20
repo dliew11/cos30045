@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Data visualisation week 2" />
+    <meta name="keywords" content="HTML, CSS" />
+    <meta name="author" content="Liew Chan Yeong Derrick " />
+  
+    <title>LAB 2.2 D3 Drawing with Data - Bar Chart </title>
+    <br>
+    <br>
+    <style>
+      a{
+        
+        color: black;
+        padding: 15px 25px;
+        text-align: center;
+        text-decoration: none;
+       
+      }
+      
+      a:hover{
+        background-color: rgb(0, 255, 72);
+      }
+  
+      a{border: 2px solid black;}
+  
+      body{
+        background-color: rgb(28, 207, 231);
+      }
+      </style>
+    <a href="lab2-1.html">lab2.1</a>
+    <a href="Lab2-2.html">lab2.2</a>
+    <a href="lab2-3.html">lab2.3</a>
+    <a href="lab 2-4.html">lab2.4</a>
+    <a href="index.html">Home</a>
+    <script src="https://d3js.org/d3.v7.min.js"></script> 
+
+   
+</head>
+
+<body> 
+    <h1> The D3 Journey starts here ...</h1>
+
+    <script>
+        var w =500;
+        var h =200;
+        var barPadding = 3;
+        var dataset = [14, 5, 26, 23, 9];
+
+        
+        var svg = d3.select("body")
+                    .append("svg")
+                    .attr("width", w)
+                    .attr("height", h)
+
+        svg. selectAll("rect")
+        .data(dataset)
+           .enter()
+           .append("rect")
+           .attr("x",function(d,i) {
+            return i * (w / dataset.length);
+           })
+           .style("fill", "#0099cc")
+           .attr("y",function(d){
+            return h -(d*3)
+           })
+           .attr("y", 0) //make the bar chart backward 
+           .attr("width", w / dataset.length - barPadding)
+           .attr("height",  function(d) {
+            return d*4 ;
+           });
+
+
+
+    </script>
+    <br>
+    <footer style ="color: gray;"> COS30045 DATA visualisation<br> LIEW Chan Yeong Derrick</footer>
+    

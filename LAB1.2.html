@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description"	content="Data Visualisation Exercise 1"/>
+	<meta name="keywords"		  content="HTML, CSS"/>
+	<meta name="author"			  content="Derrick"/>
+
+	<title>Task 1.2 JAVASCRIPT</title>
+	
+	<link rel="stylesheet" href="style.css">
+	<br>
+	<br>
+	<a href="index.html">HOME</a>
+	<a href="LAB1.1.html">LAB1.1</a>
+	<a href="LAB1.2.html">LAB1.2</a>
+	<a href="LAB1.3 Drawing with svg.html">LAB1.3</a>
+</head>
+
+<body>
+
+	<h1>Title of Article about Interesting Visualisation</h1>
+	<h2>Pets and the Pandemic</h2>
+    <p> A report from Animal Medicines Australia (AMA) has found that many Australians took the opportunity to introduce a pet into their household during the pandemic. Their survey indicated that there was a significant increase in the percent of households taking in a new dog, fish or bird. Their research also indicated that pets had a number of positive influences on their lives such as:</p>
+	<ul>
+		<li>companionship</li>
+		<li>Better mental health</li>
+		<li>Joy and happiness</li>
+	</ul>
+    <button class="button1" onclick="show('2019.png', 'Fig1. Percent of most popular pet owned by Australia in 2019', '2019')">2019</button>
+    <button class="button2" onclick="show('2021.png', 'Fig2. Percent of most popular pet owned by Australia in 2021', '2021')">2021</button>
+    <button class="button3" onclick="show('both.png', 'Fig3. Percent of most popular pet owned by Australia in 2019 and 2021', 'both')">Both</button>
+
+	
+    <figure>
+        <img id="ChartImg" style="width:50%; display: none;">
+        <figcaption id="ChartCap"></figcaption> 
+    </figure>
+
+    <!-- Update image and caption -->
+    <script>
+        function show(Image, ImgDesc, ImgAlt) {
+            document.getElementById('ChartImg').src = Image;
+            document.getElementById('ChartImg').alt = ImgAlt;
+            document.getElementById('ChartCap').innerHTML = ImgDesc;
+            document.getElementById('ChartImg').style.display = 'block';
+        }
+    </script>
+    <figcaption>Fig 1. Comparison Of Pet Ownership in 2019 and 2021. Data Source: <a1 href="https://animalmedicinesaustralia.org.au/wp-content/uploads/2021/08/AMAU005-PATP-Report21_v1.41_WEB.pdf" target="_blank">Animal Medicines Australia Report</a1></figcaption></figure>
+	<p>With the increase in pet ownership the AMA are encouraging policy makers to consider the needs of companion animals and their owners when considering rental, strata and body corporate regulations are well as accepting animals in public places and transport.</p>
+
+
+	<footer style ="color: gray;">COS30045 Data Visualisation<br> LIEW Chan Yeong Derrick</footer>
+
+</body>
+</html>

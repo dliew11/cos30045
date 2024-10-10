@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Data visualisation" />
+  <meta name="keywords" content="HTML, CSS" />
+  <meta name="author" content="Derrick" />
+  <style>
+    a{
+      
+      color: black;
+      padding: 15px 25px;
+      text-align: center;
+      text-decoration: none;
+     
+    }
+    
+    a:hover{
+      background-color: rgb(0, 255, 72);
+    }
+
+    a{border: 2px solid black;}
+
+    body{
+      background-color: rgb(28, 207, 231);
+    }
+    </style>
+
+  <title>lab5.2 D3 Transitions </title>
+
+  
+  <script src="https://d3js.org/d3.v7.min.js"></script> 
+  <script type="text/javascript" src="lab5.2.js"></script>
+
+
+</head>
+
+<body>
+
+  <h1>Update and Transition</h1>
+  <a href="index.html">Home</a>
+  <a href="lab5.1.html">lab5.1</a>
+<a href="lab5.2.html">lab5.2</a>
+<a href="lab5.3.html">lab5.3</a>
+<br>
+<br>
+<br>
+<button id="update" style="background-color: rgb(63, 124, 144); border:none ; color: white">Update once</button>
+<button id="transition1" style= "background-color: yellow ; border: none; color:grey ">Transition 1</button>
+<button id="transition2" style= "background-color: green ; border: none; color:white ">Transition 2</button><br />
+  <span id="visualisation"></span>
+  <p id ="chart"></p>
+
+
+  
+  <footer style="color:grey">
+    COS30045 Data Visualization <br> Liew Chan Yeong Derrick 
+  </footer>
+</body>
+</html>

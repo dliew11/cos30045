@@ -12,7 +12,7 @@ function init() {
     var path = d3.geoPath().projection(projection);
   
     // Create the SVG container
-    var svg = d3.select("body")
+    var svg = d3.select("#MapOnPage")
       .append("svg")
       .attr("width", w)
       .attr("height", h)

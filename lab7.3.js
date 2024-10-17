@@ -33,7 +33,7 @@ function init(){
     var color = d3.scaleOrdinal(d3.schemeCategory10);
     
     //Create SVG element
-    var svg = d3.select("body")
+    var svg = d3.select("#chart")
                 .append("svg")
                 .attr("width", w)
                 .attr("height", h);

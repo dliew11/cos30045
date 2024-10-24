@@ -19,7 +19,7 @@ function init() {
       .attr("fill", "grey");
   
     // Load and draw the map using GeoJSON data
-    d3.json("LGA_VIC.json").then(function (json) {
+    d3.json("https://raw.githubusercontent.com/dliew11/COS30045/refs/heads/main/LGA_VIC.json").then(function (json) {
       svg.selectAll("path")
         .data(json.features)
         .enter()
@@ -28,5 +28,5 @@ function init() {
     });
   }
   
-  // Ensure the function runs when the page loads
+  
   window.onload = init;
